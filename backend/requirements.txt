@@ -1,7 +1,11 @@
 Flask==2.3.2
 Flask-Cors==3.0.10
+gunicorn
 Werkzeug==2.3.8
 spacy==3.7.1
+nltk
+pypdf2
+sqlalchemy
 pdfplumber==0.8.0
 python-docx==0.8.11
 python-dotenv==1.0.0
