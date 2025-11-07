@@ -1,0 +1,233 @@
+:root {
+  --primary: #6a5af9; /* Soft purple accent */
+  --muted: #c5c6ca;   /* Light grey for muted text */
+  --bg-gradient: linear-gradient(135deg, #0a1930, #2b0f77); /* Deep navy → violet */
+  --card-bg: #121e3d; /* Dark bluish cards */
+  --btn-bg: #6a5af9;  /* Purple buttons */
+  --btn-hover: #4b3fd2; /* Darker purple hover */
+  --progress-low: #f87171;     /* Red for low */
+  --progress-average: #facc15; /* Yellow for average */
+  --progress-high: #22c55e;    /* Green for high */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-gradient);
+  color: #eaeaea;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  background: #0f1a3a;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.navbar-brand {
+  font-weight: 600;
+  color: var(--primary) !important;
+}
+.nav-link {
+  color: #e0e0e0 !important;
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: var(--primary) !important;
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px 20px;
+  position: relative;
+}
+
+#hero {
+  background: var(--bg-gradient);
+  color: white;
+  text-align: center;
+}
+
+#hero h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+#hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+/* Feature Circles */
+.feature-circles {
+  display: flex;
+  gap: 2rem;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.circle-card {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.circle-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: linear-gradient(135deg, #6a5af9, #2b0f77);
+  color: white;
+}
+.circle-card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.circle-card p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Card */
+.card {
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  background: var(--card-bg);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+h2 {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #0f1a3a;
+  color: white;
+}
+.btn-primary, .btn-success {
+  background: var(--btn-bg);
+  border: none;
+  color: white;
+}
+.btn-primary:hover, .btn-success:hover {
+  background: var(--btn-hover);
+}
+
+/* Dropzone */
+.dropzone {
+  border: 2px dashed #6a5af9;
+  border-radius: 12px;
+  padding: 40px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+  position: relative;
+  color: var(--muted);
+}
+.dropzone:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(106,90,249,0.3);
+}
+.drop-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
+.file-preview {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.file-preview i {
+  font-size: 2rem;
+}
+
+/* Progress */
+.progress-bar {
+  transition: width 0.6s ease, background 0.6s ease;
+}
+.ats-score-card{
+  color:white;
+}
+.results-card {
+  margin-top: 20px;
+  padding: 20px;
+  background: #1a2448;
+  border-radius: 12px;
+  border: 1px solid #2e3a6a;
+  color:white;
+}
+.score-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #222b5a, #2b356a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  font-weight: 700;
+  color:white;
+  font-size:30px;
+}
+
+/* Side Progress */
+.side-progress {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+.step-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #777;
+  transition: all 0.3s;
+}
+.step-indicator.active {
+  background: var(--primary);
+  transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+  background: #0f1a3a;
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid #1f2b56;
+  font-size: 0.9rem;
+  color: #aaa;
+}
